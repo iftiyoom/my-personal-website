@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration — Iftiyoom Mulatu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">IM<span>.</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#hobbies">Interests</a></li>
+    <li><a href="index.html#demo">Demo</a></li>
+    <li><a href="registration.html">Register</a></li>
+  </ul>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- FORM PAGE -->
+<div class="form-page">
+  <div class="form-container animate">
+
+    <!-- Form Header -->
+    <div class="form-header">
+      <p class="section-label">Jimma University</p>
+      <h1>Student Registration</h1>
+    </div>
+
+    <!-- Form Body -->
+    <div class="form-body">
+
+      <!-- Back Button -->
+      <div style="margin-bottom:2rem;">
+        <a href="index.html" class="btn btn-outline" style="display:inline-flex;">← Back to Home</a>
+      </div>
+
+      <!-- Success Banner (hidden by default) -->
+      <div class="success-banner" id="successBanner">
+        ✅ Registration submitted successfully! Welcome aboard.
+      </div>
+
+      <form id="studentForm" novalidate>
+
+        <div class="form-grid">
+
+          <!-- Full Name -->
+          <div class="form-group">
+            <label for="fullname">Full Name <span style="color:#d94f3a">*</span></label>
+            <input type="text" id="fullname" name="fullname" placeholder="e.g. Iftiyoom Mulatu">
+            <span class="error-msg" id="fullname-err"></span>
+          </div>
+
+          <!-- Student ID -->
+          <div class="form-group">
+            <label for="studentid">Student ID <span style="color:#d94f3a">*</span></label>
+            <input type="text" id="studentid" name="studentid" placeholder="e.g. JU-IT-2024-001">
+            <span class="error-msg" id="studentid-err"></span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label for="email">Email Address <span style="color:#d94f3a">*</span></label>
+            <input type="email" id="email" name="email" placeholder="you@example.com">
+            <span class="error-msg" id="email-err"></span>
+          </div>
+
+          <!-- Age -->
+          <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" id="age" name="age" min="15" max="60" placeholder="18">
+            <span class="error-msg" id="age-err"></span>
+          </div>
+
+          <!-- Gender -->
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label class="radio-label">
+                <input type="radio" name="gender" value="male"> Male
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="female"> Female
+              </label>
+              <label class="radio-label">
+                <input type="radio" name="gender" value="other"> Other
+              </label>
+            </div>
+          </div>
+
+          <!-- Department -->
+          <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" name="department">
+              <option value="">Select your department…</option>
+              <option value="it" selected>Information Technology</option>
+              <option value="cs">Computer Science</option>
+              <option value="se">Software Engineering</option>
+              <option value="is">Information Systems</option>
+            </select>
+          </div>
+
+          <!-- Courses -->
+          <div class="form-group full-width">
+            <label>Enrolled Courses</label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="courses" value="html" checked> HTML & Web Fundamentals
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="courses" value="ds"> Data Structures & Algorithms
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="courses" value="os"> Operating Systems
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="courses" value="cn"> Computer Networks
+              </label>
+            </div>
+          </div>
+
+          <!-- Date -->
+          <div class="form-group">
+            <label for="regdate">Registration Date</label>
+            <input type="date" id="regdate" name="regdate">
+          </div>
+
+          <!-- Notes -->
+          <div class="form-group full-width">
+            <label for="notes">Additional Notes</label>
+            <textarea id="notes" name="notes" placeholder="Any information you'd like to share..."></textarea>
+          </div>
+
+        </div><!-- /form-grid -->
+
+        <!-- Actions -->
+        <div class="form-actions">
+          <input type="submit" value="Submit Registration">
+          <input type="reset" value="Clear Form">
+        </div>
+
+      </form>
+    </div><!-- /form-body -->
+  </div><!-- /form-container -->
+</div><!-- /form-page -->
+
+<footer>
+  <p>Crafted with care by <strong>Iftiyoom Mulatu</strong> &mdash; &copy; 2026. All rights reserved.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
